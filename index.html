@@ -107,9 +107,9 @@
 
         async function predict() {
             var dic_class2information = {};
-            dic_class2information['case1'] = '설명1';
-            dic_class2information['case2'] = '설명2';
-            dic_class2information['case3'] = '설명3';
+            dic_class2information['Pomeranian'] = '포메라니안(영어: Pomeranian)은 중앙유럽(오늘날 독일 북동부, 폴란드 북서부)에 있는 포메라니아 지역에서 유래된 스피츠 종류의 애완견이다. ';
+            dic_class2information['Poodle'] = '푸들(poodle)은 개의 품종 중 하나이며, 프랑스의 국견이다.';
+            dic_class2information['Shih Tzu'] = '시추[1]는 중국에서 비롯한 개 품종이며 과거 중국 황실이 기르던 견종이다.';
             var image = document.getElementById("face-image");
             const prediction = await model.predict(image, false);
             prediction.sort((a, b) => parseFloat(b.probability) - parseFloat(a.probability));
